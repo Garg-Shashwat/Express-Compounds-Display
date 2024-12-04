@@ -1,1 +1,42 @@
 express_backend/node_modules/
+
+# Compiled output
+angular_frontend//dist
+angular_frontend/tmp
+angular_frontend/out-tsc
+angular_frontend/bazel-out
+
+# Node
+angular_frontend/node_modules
+angular_frontend/npm-debug.log
+angular_frontend/yarn-error.log
+
+# IDEs and editors
+angular_frontend/.idea/
+angular_frontend/.project
+angular_frontend/.classpath
+angular_frontend/.c9/
+angular_frontend/*.launch
+angular_frontend/.settings/
+angular_frontend/*.sublime-workspace
+
+# Visual Studio Code
+angular_frontend/.vscode/*
+angular_frontend/!.vscode/settings.json
+angular_frontend/!.vscode/tasks.json
+angular_frontend/!.vscode/launch.json
+angular_frontend/!.vscode/extensions.json
+angular_frontend/.history/*
+
+# Miscellaneous
+angular_frontend/.angular/cache
+angular_frontend/.sass-cache/
+angular_frontend/connect.lock
+angular_frontend/coverage
+angular_frontend/libpeerconnection.log
+angular_frontend/testem.log
+angular_frontend/typings
+
+# System files
+angular_frontend/.DS_Store
+angular_frontend/Thumbs.db
