@@ -1,13 +1,17 @@
 import express from 'express';
-import bodyParser from 'body-parser';
 import db from './models/index.js';
-import dotenv from 'dotenv';
+import 'dotenv/config';
+import { setupServer, startServer } from './transport/server.js'
 
-dotenv.config()
-
+// DB setup
 (async () => {
     await db.initializeDatabase();
 
     await db.conn.sync({ force: false });
     console.log('Database synced successfully.');
 })();
+
+const app = express();
+
+setupServer(app);
+startServer(app);
