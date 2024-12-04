@@ -1,8 +1,6 @@
 import { Sequelize } from 'sequelize';
-import dotenv from 'dotenv';
+import 'dotenv/config';
 import Compound from './compound.js';
-
-dotenv.config();
 
 const dbconn = new Sequelize(
     process.env.DB_NAME,
@@ -19,7 +17,7 @@ const dbconn = new Sequelize(
               /ECONNREFUSED/,
               /ETIMEDOUT/
             ],
-            timeout: 5000,
+            timeout: 10000,
           },
     }
 )
