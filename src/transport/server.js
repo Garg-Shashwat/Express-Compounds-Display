@@ -1,6 +1,6 @@
 import express from 'express';
 import router from "./router.js";
-import errorHandler from "./middleware/error_handler.js";
+import { errorHandler } from "./middleware/error_handler.js";
 
 const PORT = process.env.PORT || 5000;
 
