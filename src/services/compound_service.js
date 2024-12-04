@@ -26,4 +26,5 @@ export const deleteCompound = async (id) => {
         return null
     }
     await compound.destroy();
+    return compound;
 };
