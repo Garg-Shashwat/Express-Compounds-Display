@@ -1,0 +1,27 @@
+<div class="update-container">
+    <form class="update-form" [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+        <h1>Update Compound</h1>
+
+        <div class="form-group">
+            <label for="name">Compound Name</label>
+            <input type="text" id="name" formControlName="name" required class="form-input" />
+        </div>
+
+        <div class="form-group">
+            <label for="image">Image URL</label>
+            <input type="text" id="image" formControlName="image" required class="form-input" />
+        </div>
+
+        <div class="form-group">
+            <label for="description">Description</label>
+            <textarea id="description" formControlName="description" class="form-textarea"></textarea>
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="update-button">Update</button>
+            <button type="button" class="cancel-button" [routerLink]="'/compounds'">
+                Cancel
+            </button>
+        </div>
+    </form>
+</div>

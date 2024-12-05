@@ -1,0 +1,124 @@
+/* Overall container styling */
+.update-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    min-height: 100vh; /* Full-page height */
+  }
+  
+  /* Form styling */
+  .update-form {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 100%;
+    max-width: 500px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Form heading */
+  .update-form h1 {
+    font-size: 1.8rem;
+    color: #333;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Form group styling */
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-input,
+  .form-textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-input:focus,
+  .form-textarea:focus {
+    border-color: #007bff;
+  }
+  
+  /* Textarea styling */
+  .form-textarea {
+    height: 100px;
+    resize: none; /* Disable resizing */
+  }
+  
+  /* Form action buttons */
+  .form-actions {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .update-button,
+  .cancel-button {
+    flex: 1;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+  
+  /* Update button */
+  .update-button {
+    background-color: #28a745; /* Green button */
+    color: white;
+  }
+  
+  .update-button:hover {
+    background-color: #218838;
+  }
+  
+  .update-button:active {
+    transform: scale(0.98);
+  }
+  
+  /* Cancel button */
+  .cancel-button {
+    background-color: #dc3545; /* Red button */
+    color: white;
+  }
+  
+  .cancel-button:hover {
+    background-color: #c82333;
+  }
+  
+  .cancel-button:active {
+    transform: scale(0.98);
+  }
+  
+  @media (max-width: 768px) {
+    .form-actions {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .update-button,
+    .cancel-button {
+      flex: none;
+      width: 100%;
+    }
+  }
+  

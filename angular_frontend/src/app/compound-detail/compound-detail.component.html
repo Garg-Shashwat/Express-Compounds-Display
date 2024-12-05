@@ -11,6 +11,12 @@
     <div class="details-content">
       <h1 class="compound-name">{{ compound?.name }}</h1>
       <p class="compound-description">{{ compound?.description }}</p>
+      <button
+        class="back-button"
+        [routerLink]="['/compounds', compound?.id, 'edit']"
+      >
+        Edit Compound
+      </button>
       <button class="back-button" [routerLink]="'/compounds'">&larr; Back to List</button>
     </div>
   </div>
