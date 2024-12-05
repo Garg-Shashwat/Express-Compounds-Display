@@ -1,4 +1,5 @@
 import express from 'express';
+import cors from 'cors';
 import router from "./router.js";
 import { errorHandler } from "./middleware/error_handler.js";
 
@@ -7,6 +8,8 @@ const PORT = process.env.PORT || 5000;
 export const setupServer = async (server) => {
     server.use(express.json());
 
+    server.use(cors());
+    
     server.use('/ping', (req, res) => res.send("Pong!"))
 
     server.use('/api', router);

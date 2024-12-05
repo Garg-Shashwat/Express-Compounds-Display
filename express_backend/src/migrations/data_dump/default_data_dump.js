@@ -20,7 +20,6 @@ export const dumpData = async (filePath) => {
         })
         .on('end', () => {
             console.log('CSV file successfully processed.');
-            console.log(records[0]);
 
             const insertQuery = `
                 INSERT INTO Compounds (name, description, image, imageAttribution, createdAt, updatedAt) 

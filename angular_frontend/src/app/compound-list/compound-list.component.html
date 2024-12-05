@@ -1,0 +1,34 @@
+<div class="list-container">
+  <div class="card" *ngFor="let compound of displayedCompounds" (click)="onCardClick(compound.id)">
+    <div class="image-container">
+      <img 
+        [src]="compound.image" 
+        alt="{{ compound.name }}" 
+        (error)="handleImageError($event)" 
+        class="compound-image" 
+      />
+    </div>
+    <div class="card-content">
+      <h3>{{ compound.name }}</h3>
+      <a [routerLink]="['/compounds', compound.id]" class="details-link">View Details</a>
+    </div>
+  </div>
+</div>
+
+<div class="pagination">
+  <button 
+    [disabled]="currentPage === 1" 
+    (click)="changePage(false)" 
+    class="pagination-button"
+  >
+    &larr; Previous
+  </button>
+  <span class="pagination-info">Page {{ currentPage }}</span>
+  <button 
+    [disabled]="currentPage * pageSize >= compounds.length" 
+    (click)="changePage(true)" 
+    class="pagination-button"
+  >
+    Next &rarr;
+  </button>
+</div>

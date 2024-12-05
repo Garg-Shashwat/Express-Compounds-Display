@@ -16,6 +16,7 @@
   "author": "Shashwat Garg",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
     "csv-parser": "^3.0.0",
     "dotenv": "^16.4.6",
     "express": "^4.21.1",

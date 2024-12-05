@@ -1,0 +1,17 @@
+<div class="details-container">
+  <div class="details-card">
+    <div class="image-container">
+      <img
+        [src]="compound?.image"
+        (error)="handleImageError($event)"
+        alt="{{ compound?.name }}"
+        class="compound-image"
+      />
+    </div>
+    <div class="details-content">
+      <h1 class="compound-name">{{ compound?.name }}</h1>
+      <p class="compound-description">{{ compound?.description }}</p>
+      <button class="back-button" [routerLink]="'/compounds'">&larr; Back to List</button>
+    </div>
+  </div>
+</div>
